@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-image: url("img/background.jpg");
+            background-size: cover;
+            margin-top: 6px;
+            margin-right:10px;
+        }
+        .nav{
+            border: 5px solid black;
+            padding: 10px;
+            float: right;
+            border-radius: 30px;
+            margin: 5px;
+            background-color: white;
+            text-decoration: none;
+            position: relative right 20px; bottom: 20px;
+    
+        }
+        
+        .nav a{
+            border: 5px solid black;
+            padding: 10px;
+            float: right;
+            border-radius: 30px;
+            margin: 5px;
+            background-color: gray;
+            text-decoration: none;
+            position: relative right 20px;
+             bottom: 20px;
+
+        }
+
+        .nav a:hover{
+            background-color: aqua;
+        
+        }
+
+        .nav a.active{
+            background-color: aqua;
+
+            
+        }
+        
+        *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box
+}
+
+
+.contact {
+    display: flex;
+    width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 50px 0px;
+}
+
+.contact-info {
+    background: linear-gradient(0deg, hsla(100, 100%, 100%, .3), hsla(0, 0%, 0%, .3)), url(img/office.jpg);
+    height: auto;
+    width: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.link {
+    display: block;
+}
+
+.socials {
+    margin-right: 10px;
+}
+
+.social a {
+    text-decoration: none;
+}
+
+.form {
+    background-color: hsla(100, 100%, 100%, .3);
+    width: 50%;
+    padding: 30px;
+
+}
+
+.form h1 {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.row .col {
+    margin: 0px 10px;
+}
+
+.col label {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+}
+
+.col .input {
+    border-radius: 4px;
+    border: 1px solid #000;
+    outline: none;
+    padding: 10px;
+    margin: 5px auto;
+}
+
+.message {
+    display: block;
+    margin: auto;
+}
+
+.submit {
+    width: 50%;
+    background-color: #000;
+    color: #fff;
+    border-radius: 10px;
+    font-size: 1rem;
+    padding: 5px 0px;
+    margin-top: 10px;
+}
+
+    </style>
+</head>
+<body>
+
+    <div class="nav"> 
+        <a href= "registration.html">REGISTRATION</a>
+        <a href= "login.html">LOG IN </a>
+        <a href= "about.html">ABOUT</a>
+        <a class= "active" href= "contact.html">CONTACT</a>   
+        <a href= "product.html">PRODUCT</a>  
+        <a href= "midterm.html">HOME</a>
+      
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  
+  <center><div class="form">
+    <h1>Send us a message</h1>
+    <form action="contact.php" method="post">
+        <div class="row">
+            <div class="col">
+                <label for="fname">First Name</label>
+                <br>
+                <input type="text" name="fname" id="name" placeholder="First Name" class="input" required
+                    maxlength="50">
+            </div>
+            <div class="col">
+                <label for="lname">Last Name</label><br>
+                <input type="text" name="lname" id="lname" placeholder="Last Name" class="input" required
+                    maxlength="50">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col"><label for="phone">Phone</label><br>
+                <input type="tel" name="phone" id="phone" placeholder="+091234" class="input" required
+                    maxlength="11">
+            </div>
+            <div class="col">
+                <label for="email">Email</label><br>
+                <input type="email" name="email" id="email" placeholder="Email" class="input" required
+                    maxlength="50">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label for="address">Address</label><br>
+                <input type="text" name="address" id="address" placeholder="Address" class="input" required
+                    maxlength="50">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col message"><label for="message">Message us</label><br>
+                <textarea name="message" id="message" cols="30" rows="3" class="input"
+                    placeholder="Message here..."></textarea>
+            </div>
+        </div>
+        <div class="row">
+            <button type="submit" class="submit">Submit</button>
+        </div>
+    </form>
+</div>
+</body>
+</html>

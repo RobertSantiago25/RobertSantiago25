@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, inital scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://csdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+body {
+    background: url(img/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.login-form {
+    padding: 80px;
+    background: #000;
+    opacity: 0.8;
+    border: 5px solid;
+    border-radius: 50px;
+    width: 350px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    color: #fff;
+}
+
+.login-form h1 {
+    font: 40px;
+    text-align: center;
+    margin: 40px 0;
+   
+}
+.login-form p {
+    font-size: 20px;
+    margin: 15px 0;
+}
+.login-form input {
+    font-size: 16px;
+    width: 100%;
+    padding: 15px 10px;
+    border: 0;
+    outline: none;
+    border-radius: 5px;
+}
+.fa-solid {
+    padding-right: 5px;
+    color: #fff;
+}
+.login-form button {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 20px;
+    padding: 10px 15px;
+    width: 30%;
+    border-radius: 5px;
+    border: 0;
+} 
+
+.container .title {
+    font-size: 25px;
+    font-weight: bold;
+    position: relative;
+    
+
+
+}
+
+</style>
+<body>
+    <a href="midterm.html"><button><h1>HOME</h1></button></a>
+   
+    <div class="login-form">
+       
+        <h1><i class="fa fa-sign-in"></i>Login Form</h1>
+        <form action="#" method="POST">
+            <p><i class="fa fa-envelope"></i> Email </p>
+            <input type="email" name="Email" placeholder="Enter your email here..." required>
+            <p> Password </p>
+            <input type="password" name="pass" placeholder="Enter your password here..." required>
+        </p>
+        <button type="submit">LOGIN</button>
+        <br>
+        <button type="reset">CLEAR</button>
+        
+        </form>
+    </div>
+</body>
+</head>
+</html>

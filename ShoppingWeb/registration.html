@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<style> 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background: url(img/background.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.container {
+    font-family: calibri;
+    font-weight: bold;
+    max-width: 700px;
+    width: 100%;
+    background-color: #000;
+    padding: 25px 30px;
+    border-radius: 5px;
+    color: #fff;
+    border: 1px solid;
+    box-shadow: 5px 10px 8px grey;
+    opacity: .8;
+}
+
+.container .title {
+    font-size: 25px;
+    font-weight: bold;
+    position: relative;
+
+}
+
+.container .title::before {
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 30px;
+}
+
+.container form .user-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0px 12px 0px;
+}
+
+form .user-details .input-box {
+    margin-bottom: 15px;
+    width: calc(100% / 2 - 20px);
+}
+
+.user-details .input-box .details {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.user-details .input-box input {
+    height: 45px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 2px solid burlywood;
+    padding-left: 15px;
+    font-size: 16px;
+    border-bottom-width: 2px;
+    transition: all ease .3s;
+}
+
+.user-details .input-box .input:focus,
+.user-details .input-box .input:valid {
+    border: #fff;
+}
+
+form .gender-details .gender-title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+form .gender-details .category {
+    display: flex;
+    width: 80%;
+    margin: 14px 0px;
+    justify-content: space-between;
+}
+
+.gender-details .category label {
+    display: flex;
+    align-items: center;
+}
+
+.gender-details .category .dot {
+    height: 18px;
+    width: 18px;
+    background: #fff;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 5px solid transparent;
+    transition: all .3s ease;
+}
+
+#dot-1:checked~.category label .one,
+#dot-2:checked~.category label .two,
+#dot-3:checked~.category label .three {
+    border-color: #d9d9d9;
+    background: #9b599b;
+
+}
+
+form input [type="radio"] {
+    display: none;
+}
+
+form .button {
+    height: 45px;
+    margin: 45px 0px;
+}
+
+form .button input {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    background-color: burlywood;
+}
+
+form .button input:hover {
+    background-color: blue;
+}
+
+@media (max-width: 584px) {
+    .container {
+        max-width: 100%;
+    }
+
+    form .user-details .input-box {
+        margin-bottom: 15px;
+        width: 100%;
+    }
+
+    form .gender-details .category {
+        width: 100%;
+    }
+
+    .container form .user-details {
+        max-height: 300px;
+        overflow-y: scroll;
+    }
+
+    .user-detials::-webkit-scrollbar {
+        width: 0;
+    }
+    
+   
+    
+}</style>
+<body>
+   
+   
+    
+
+   
+    <div class="container">
+        <a href="midterm.html"><button><h2>HOME</h2></button></a>
+        <div class="title">
+            <center><h3>Registration</h3></center>
+        </div>
+        <form action="#" method="post">
+            <div class="user-details">
+                <div class="input-box">
+                    <span class="details">Full Name</span>
+                    <input type="text" name="" placeholder="Enter your name" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Username</span>
+                    <input type="text" name="" placeholder="Enter username..." required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Email</span>
+                    <input type="text" name="" placeholder="Enter email..." required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Phone </span>
+                    <input type="text" name="" placeholder="Enter phone number..." required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Password</span>
+                    <input type="text" name="" placeholder="Enter password" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Confirm Password</span>
+                    <input type="text" name="" placeholder="Confirm password" required>
+                </div>
+            </div>
+
+            <div class="gender-details">
+                <input type="radio" name="gender" id="dot-1">
+                <input type="radio" name="gender" id="dot-2">
+                <input type="radio" name="gender" id="dot-3">
+                <span class="gender-title">Gender</span>
+                <div class="category">
+                    <label for="dot-1">
+                        <span class="dot one"></span>
+                        <span class="gender">Male</span>
+                    </label>
+                    <label for="dot-2">
+                        <span class="dot two"></span>
+                        <span class="gender">Female</span>
+                    </label>
+                    <label for="dot-3">
+                        <span class="dot three"></span>
+                        <span class="gender">Prefer not to say</span>
+                    </label>
+                </div>
+            </div>
+            <div class="button">
+                <input type="submit" name="" value="Register">
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
